@@ -17,26 +17,10 @@
         
         <script src="https://www.gstatic.com/firebasejs/ui/4.6.1/firebase-ui-auth.js"></script>
         <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.6.1/firebase-ui-auth.css" />
-
         
+        <script src="firebase-conf.js"></script>
+        <script src="firebase-auth-ui.js"></script>
         <script>
-
-            // Your web app's Firebase configuration
-            // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-            var firebaseConfig = {
-                apiKey: "AIzaSyCM_XMS39wXtZ3QLoYzHx-dEVPUqiNmQeM",
-                authDomain: "brouwerij-app.firebaseapp.com",
-                databaseURL: "https://brouwerij-app.firebaseio.com",
-                projectId: "brouwerij-app",
-                storageBucket: "brouwerij-app.appspot.com",
-                messagingSenderId: "23491668877",
-                appId: "1:23491668877:web:9c7a210cad3c856a35abc4",
-                measurementId: "G-Q78PN4E483"
-            };
-            // Initialize Firebase
-            firebase.initializeApp(firebaseConfig);
-            firebase.analytics();
-            
             function saveToFirebase() {
                 var recipe = {
                     water: 30,
@@ -66,56 +50,8 @@
                     });
             }
 
-            var ui = new firebaseui.auth.AuthUI(firebase.auth());
-
-            ui.start('#firebaseui-auth-container', {
-                signInOptions: [
-                    // List of OAuth providers supported.
-                    firebase.auth.GoogleAuthProvider.PROVIDER_ID,
-                    firebase.auth.FacebookAuthProvider.PROVIDER_ID,
-                    firebase.auth.TwitterAuthProvider.PROVIDER_ID,
-                    firebase.auth.GithubAuthProvider.PROVIDER_ID
-                ],
-                // Other config options...
-            });
-
-            var ui = new firebaseui.auth.AuthUI(firebase.auth());
-
-            var uiConfig = {
-  callbacks: {
-    signInSuccessWithAuthResult: function(authResult, redirectUrl) {
-      // User successfully signed in.
-      // Return type determines whether we continue the redirect automatically
-      // or whether we leave that to developer to handle.
-      saveToFirebase();
-      return false;
-    },
-    uiShown: function() {
-      // The widget is rendered.
-      // Hide the loader.
-      document.getElementById('loader').style.display = 'none';
-    }
-  },
-  // Will use popup for IDP Providers sign-in flow instead of the default, redirect.
-  signInFlow: 'popup',
-  //signInSuccessUrl: '<url-to-redirect-to-on-success>',
-  signInOptions: [
-    // Leave the lines as is for the providers you want to offer your users.
-    firebase.auth.GoogleAuthProvider.PROVIDER_ID,
-    firebase.auth.FacebookAuthProvider.PROVIDER_ID,
-    firebase.auth.TwitterAuthProvider.PROVIDER_ID,
-    firebase.auth.GithubAuthProvider.PROVIDER_ID,
-    firebase.auth.EmailAuthProvider.PROVIDER_ID,
-    firebase.auth.PhoneAuthProvider.PROVIDER_ID
-  ],
-  // Terms of service url.
-  //tosUrl: '<your-tos-url>',
-  // Privacy policy url.
-  //privacyPolicyUrl: '<your-privacy-policy-url>'
-};
-
-ui.start('#firebaseui-auth-container', uiConfig);
-                    </script>
+            
+        </script>
     </head>
     <body>
         <h1>Welcome to My Awesome App</h1>
