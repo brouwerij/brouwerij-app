@@ -8,7 +8,7 @@ ui.start('#firebaseui-auth-container', {
     // Other config options...
 });
 
-var ui = new firebaseui.auth.AuthUI(firebase.auth());
+var ui = firebaseui.auth.AuthUI.getInstance() || new firebaseui.auth.AuthUI(firebase.auth());
 
 var uiConfig = {
     callbacks: {
@@ -16,6 +16,7 @@ var uiConfig = {
             // User successfully signed in.
             // Return type determines whether we continue the redirect automatically
             // or whether we leave that to developer to handle.
+            console.log("succes");
             return false;
         },
         uiShown: function() {
