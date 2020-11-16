@@ -36,11 +36,26 @@ firebase.initializeApp(firebaseConfig);
 firebase.analytics();
 
 function saveToFirebase(email) {
-    var emailObject = {
-        email: email
+    var recipe = {
+        water: email,
+        spoelwater: spoelwater,
+        maischSchema: [
+            {
+                temp: 62,
+                time: 30
+            },
+            {
+                temp: 72,
+                time: 60
+            },
+            {
+                temp: 78,
+                time: 5
+            }
+        ]
     };
 
-    firebase.database().ref('recipes').push().set(emailObject)
+    firebase.database().ref('recipes').push().set(recipe)
         .then(function(snapshot) {
             //success(); // some success method
         }, function(error) {
