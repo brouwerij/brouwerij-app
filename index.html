@@ -37,7 +37,7 @@
             firebase.initializeApp(firebaseConfig);
             firebase.analytics();
             
-            function saveToFirebase(email) {
+            function saveToFirebase() {
                 var recipe = {
                     water: 30,
                     spoelwater: 20,
@@ -87,6 +87,7 @@
       // User successfully signed in.
       // Return type determines whether we continue the redirect automatically
       // or whether we leave that to developer to handle.
+      saveToFirebase();
       return false;
     },
     uiShown: function() {
