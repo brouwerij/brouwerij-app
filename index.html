@@ -25,6 +25,8 @@
                     naam: "Tripel Pils Nottingham",
                     water: 30,
                     spoelwater: 20,
+                    koeltemp: 22,
+                    kooktijd: 90,
                     maischSchema: [
                         {
                             temp: 62,
@@ -40,6 +42,14 @@
                         }
                     ]
                 };
+            
+                firebase.database().ref('recipes').child(recipe.naam).set(recipe)
+                    .then(function(snapshot) {
+                        //success(); // some success method
+                    }, function(error) {
+                        console.log('error' + error);
+                        //error(); // some error method
+                    });
                 
                 recipe = {
                     naam: "Weizen Pils-Tarwe Weihenstephan",
