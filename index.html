@@ -40,6 +40,34 @@
                         }
                     ]
                 };
+                
+                recipe = {
+                    naam: "Weizen Pils/Tarwe Weihenstephan",
+                    water: 30,
+                    spoelwater: 20,
+                    maischSchema: [
+                        {
+                            temp: 40,
+                            time: 20
+                        },
+                        {
+                            temp: 50,
+                            time: 15
+                        },
+                        {
+                            temp: 62,
+                            time: 30
+                        },
+                        {
+                            temp: 72,
+                            time: 30
+                        },
+                        {
+                            temp: 78,
+                            time: 5
+                        }
+                    ]
+                };
             
                 firebase.database().ref('recipes').child(recipe.naam).set(recipe)
                     .then(function(snapshot) {
