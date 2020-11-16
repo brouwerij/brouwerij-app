@@ -6,6 +6,10 @@
         <title>Brouwerij App</title>
     </head>
     <body>
+        <form onsubmit="saveToFirebase('test')"><input type="text" name="test" id="test"><input type="submit" value="test"></form>
+
+
+
         <!-- The core Firebase JS SDK is always required and must be listed first -->
         <script src="https://www.gstatic.com/firebasejs/8.0.2/firebase-app.js"></script>
 
@@ -14,21 +18,36 @@
         <script src="https://www.gstatic.com/firebasejs/8.0.2/firebase-analytics.js"></script>
 
         <script>
-        // Your web app's Firebase configuration
-        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-        var firebaseConfig = {
-            apiKey: "AIzaSyCM_XMS39wXtZ3QLoYzHx-dEVPUqiNmQeM",
-            authDomain: "brouwerij-app.firebaseapp.com",
-            databaseURL: "https://brouwerij-app.firebaseio.com",
-            projectId: "brouwerij-app",
-            storageBucket: "brouwerij-app.appspot.com",
-            messagingSenderId: "23491668877",
-            appId: "1:23491668877:web:9c7a210cad3c856a35abc4",
-            measurementId: "G-Q78PN4E483"
-        };
-        // Initialize Firebase
-        firebase.initializeApp(firebaseConfig);
-        firebase.analytics();
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+var firebaseConfig = {
+    apiKey: "AIzaSyCM_XMS39wXtZ3QLoYzHx-dEVPUqiNmQeM",
+    authDomain: "brouwerij-app.firebaseapp.com",
+    databaseURL: "https://brouwerij-app.firebaseio.com",
+    projectId: "brouwerij-app",
+    storageBucket: "brouwerij-app.appspot.com",
+    messagingSenderId: "23491668877",
+    appId: "1:23491668877:web:9c7a210cad3c856a35abc4",
+    measurementId: "G-Q78PN4E483"
+};
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
+firebase.analytics();
+
+function saveToFirebase(email) {
+    var emailObject = {
+        email: email
+    };
+
+    firebase.database().ref('recipes').push().set(emailObject)
+        .then(function(snapshot) {
+            success(); // some success method
+        }, function(error) {
+            console.log('error' + error);
+            error(); // some error method
+        });
+}
+
         </script>
     </body>
 </html>
