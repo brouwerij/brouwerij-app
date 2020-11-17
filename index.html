@@ -23,22 +23,59 @@
             function saveToFirebase() {
                 var recipe = {
                     naam: "Tripel Pils Nottingham",
-                    water: 30,
-                    spoelwater: 20,
+                    water: 15,
+                    spoelwater: 10,
                     koeltemp: 22,
-                    kooktijd: 90,
-                    maischSchema: [
+                    mout: [
+                        {
+                            naam: "Pilsmout",
+                            hoeveelheid: 5000
+                        }
+                    ],
+                    maischschema: [
                         {
                             temp: 62,
-                            time: 30
+                            tijd: 30
                         },
                         {
                             temp: 72,
-                            time: 60
+                            tijd: 60
                         },
                         {
                             temp: 78,
-                            time: 5
+                            tijd: 5
+                        }
+                    ],
+                    kookschema: [
+                        {
+                            tijd: 60,
+                            toevoegen: [
+                                {
+                                    naam: "Nothern Brewer",
+                                    hoeveelheid: 20,
+                                    eenheid: "gram"
+                                }
+                            ]
+                        },
+                        {
+                            tijd: 15,
+                            toevoegen: [
+                                {
+                                    naam: "Saaz",
+                                    hoeveelheid: 20,
+                                    eenheid: "gram"
+                                }
+                            ]
+                        },
+                        {
+                            tijd: 10,
+                            toevoegen: [
+                                {
+                                    naam: "Nothern Brewer",
+                                    hoeveelheid: 20,
+                                    eenheid: "gram"
+                                }
+                            ]
                         }
                     ]
                 };
@@ -55,26 +92,26 @@
                     naam: "Weizen Pils-Tarwe Weihenstephan",
                     water: 30,
                     spoelwater: 20,
-                    maischSchema: [
+                    maischschema: [
                         {
                             temp: 40,
-                            time: 20
+                            tijd: 20
                         },
                         {
                             temp: 50,
-                            time: 15
+                            tijd: 15
                         },
                         {
                             temp: 62,
-                            time: 30
+                            tijd: 30
                         },
                         {
                             temp: 72,
-                            time: 30
+                            tijd: 30
                         },
                         {
                             temp: 78,
-                            time: 5
+                            tijd: 5
                         }
                     ]
                 };
