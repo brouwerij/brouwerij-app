@@ -6,11 +6,11 @@ function readFromFirebase() {
         console.log(snapshot.val());
         recipes = snapshot;
 
-        snapshot.forEach(function(childSnapshot) {
+        for (let childSnapshot in snapshot) {
             console.log(childSnapshot);
             console.log(createBrewingStepsJSON(childSnapshot));
             break;
-        });
+        }
 
     });
 }
