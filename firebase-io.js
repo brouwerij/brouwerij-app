@@ -3,9 +3,12 @@ function readFromFirebase() {
     return firebase.database().ref('recipes').once('value').then(function(snapshot) {
         console.log(snapshot.val());
 
-        console.log(snapshot.val()[0]);
+        snapshot.forEach(function(childSnapshot) {
+            console.log(childSnapshot);
+            console.log(createBrewingStepsJSON(childSnapshot));
+            break;
+        });
 
-        console.log(createBrewingStepsJSON(snapshot.val()[0]))
     });
 }
 
