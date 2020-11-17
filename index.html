@@ -88,10 +88,21 @@
                         //error(); // some error method
                     });
                 
-                recipe = {
+                var recipe = {
                     naam: "Weizen Pils-Tarwe Weihenstephan",
-                    water: 30,
-                    spoelwater: 20,
+                    water: 15,
+                    spoelwater: 10,
+                    koeltemp: 22,
+                    mout: [
+                        {
+                            naam: "Pilsmout",
+                            hoeveelheid: 2000
+                        },
+                        {
+                            naam: "Tarwemout",
+                            hoeveelheid: 2500
+                        }
+                    ],
                     maischschema: [
                         {
                             temp: 40,
@@ -112,6 +123,18 @@
                         {
                             temp: 78,
                             tijd: 5
+                        }
+                    ],
+                    kookschema: [
+                        {
+                            tijd: 60,
+                            toevoegen: [
+                                {
+                                    naam: "Hallertau Perle",
+                                    hoeveelheid: 20,
+                                    eenheid: "gram"
+                                }
+                            ]
                         }
                     ]
                 };
