@@ -3,6 +3,8 @@ function readFromFirebase() {
     return firebase.database().ref('recipes').once('value').then(function(snapshot) {
         console.log(snapshot.val());
 
+        console.log(snapshot.val()[0]);
+
         console.log(createBrewingStepsJSON(snapshot.val()[0]))
     });
 }
