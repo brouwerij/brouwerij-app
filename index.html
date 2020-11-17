@@ -22,7 +22,7 @@
         <script>
             function readFromFirebase() {
                 return firebase.database().ref('recipes').once('value').then(function(snapshot) {
-                    console.log(snapshot);
+                    console.log(snapshot.val());
                 });
             }
 
