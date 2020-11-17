@@ -1,18 +1,18 @@
 
 let recipes;
-let recipe;
 
 function readFromFirebase() {
     return firebase.database().ref('recipes').once('value').then(function(snapshot) {
         console.log(snapshot.val());
-        recipes = snapshot.val();
+        recipes = snapshot;
 
-        for (let childSnapshot in snapshot.val()) {
-            recipe = snapshot[childSnapshot];
+        snapshot.forEach(function(childSnapshot) {
             console.log(childSnapshot);
             console.log(createBrewingStepsJSON(childSnapshot));
-            break;
-        }
+            return true;
+        });
+
+        
 
     });
 }
