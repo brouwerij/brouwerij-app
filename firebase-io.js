@@ -56,7 +56,7 @@ function createBrewingStepsJSON(recipe) {
                 "stap": `Maisch ${recipe.maischschema[i].tijd} minuten op ${recipe.maischschema[i].temp} graden houden`
             }
         );
-        if (i-1 < recipe.maischschema.length) {
+        if (i+1 < recipe.maischschema.length) {
             maischen.push(
                 {
                     "stap": `Maisch verwarmen tot ${recipe.maischschema[i+1].temp} graden`
