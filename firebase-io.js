@@ -8,9 +8,8 @@ function readFromFirebase() {
         recipes = snapshot;
 
         snapshot.forEach(function(childSnapshot) {
-            console.log(childSnapshot.val());
-            console.log(createBrewingStepsJSON(childSnapshot.val()));
             recipe = childSnapshot.val();
+            console.log(createBrewingStepsJSON(childSnapshot.val()));
             return true;
         });
 
