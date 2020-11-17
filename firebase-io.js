@@ -1,5 +1,6 @@
 
 let recipes;
+let recipe;
 
 function readFromFirebase() {
     return firebase.database().ref('recipes').once('value').then(function(snapshot) {
@@ -7,8 +8,8 @@ function readFromFirebase() {
         recipes = snapshot;
 
         snapshot.forEach(function(childSnapshot) {
-            console.log(childSnapshot);
-            console.log(createBrewingStepsJSON(childSnapshot));
+            console.log(childSnapshot.val());
+            console.log(createBrewingStepsJSON(childSnapshot.val()));
             return true;
         });
 
