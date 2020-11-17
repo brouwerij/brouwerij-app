@@ -20,6 +20,14 @@
         
         <script src="firebase-conf.js"></script>
         <script>
+            function readFromFirebase() {
+                return firebase.database().ref('recipes').once('value').then(function(snapshot) {
+                    console.log(snapshot);
+                });
+            }
+
+
+
             function saveToFirebase() {
                 var recipe = {
                     naam: "Tripel Pils Nottingham",
