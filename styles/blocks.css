@@ -9,11 +9,50 @@ main>section.step>a {
     color: white;
 }
 
-.step:first-child>a:first-child,
-.step:last-child>a:last-child {
+main>section.step:first-child>a.step-btn-back,
+main>section.step:last-child>a.step-btn-next {
     display: none;
+}
+
+main>section.step>.step-content {
+    background-image: url('../images/svg/gistvat.svg');
+    background-size: auto 50%;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
 }
 
 footer {
     background-color: #000;
+}
+
+header {
+    background-image: url('../images/svg/brouwproces-2.svg');
+    background-size: auto 33%;
+    background-repeat: repeat-x;
+    background-position: 50% 100%;
+    /*background-color: #952323;*/
+    background-color: #c6d9d0;
+    text-align: center;
+}
+
+header>h1 {
+    padding: 16px;
+    background-color: white;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+
+header>a>img {
+    max-height: inherit;
+    box-shadow: 0px 0px 8px black;
+    border-radius: 9999px;
+    background-color: #f9b509;
+    max-height: 50%;
+    width: auto;
+}
+
+header>a>img:hover {
+    box-shadow: 0px 0px 16px black;
 }
