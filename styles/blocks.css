@@ -1,0 +1,19 @@
+main>section.step {
+    position: relative;
+}
+
+main>section.step>a {
+    display: block;
+    text-align: center;
+    background-color: #000;
+    color: white;
+}
+
+.step:first-child>a:first-child,
+.step:last-child>a:last-child {
+    display: none;
+}
+
+footer {
+    background-color: #000;
+}

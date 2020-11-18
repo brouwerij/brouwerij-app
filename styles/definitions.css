@@ -1,0 +1,63 @@
+:root {
+    --dark: black;
+    --light: white;
+    --primary: red;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-weight: inherit;
+    font-style: inherit;
+    text-decoration: inherit;
+    color: inherit;
+    background-color: inherit;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: 1.5;
+}
+
+u {
+    text-decoration: underline;
+}
+
+i {
+    font-style: italic;
+}
+
+b {
+    font-weight: bold;
+}
+
+img {
+    width: 100%;
+}
+
+/* de waardes hieronder kunnen verschillen van website tot website. */
+html {
+    height: 100%;
+    font-family: sans-serif;
+}
+
+p {
+    font-size: 18px;
+}
+
+h1, h2, h3 {
+    line-height: 0.9;
+    letter-spacing: 5px;
+    font-family: serif;
+}
+
+h1 {
+    font-size: 32px;
+}
+
+h2 {
+    font-size: 32px;
+}
+
+h3 {
+    font-size: 20px;
+}

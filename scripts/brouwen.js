@@ -2,9 +2,14 @@ function visualiseSteps(parentel, steps) {
 
     for (let i = 0; i < steps.length; ++i) {
         let el = `
-            <article>
-                ${steps[i].stap}
-            </article>
+            <section id="step${i}" class="step">
+                <a href="#step${i-1}" class="material-icons">expand_less</a>
+                <div>
+                    <h1>STAP ${i+1}</h1>
+                    <p>${steps[i].stap}</p>
+                </div>
+                <a href="#step${i+1}" class="material-icons">expand_more</a>
+            </section>
         `;
         parentel.innerHTML += el;
     }

@@ -1,0 +1,26 @@
+header {
+    height: 100vh;
+}
+
+footer {
+    height: 100px;
+}
+
+main>section.step {
+    height: 100vh;
+    display: grid;
+
+    grid-template-rows: 100px auto 100px;
+}
+
+main>section.step:first-child {
+    grid-template-rows: auto 100px;
+}
+
+main>section.step:last-child {
+    grid-template-rows: 100px auto;
+}
+
+main>section.step>* {
+    padding: 32px;
+}

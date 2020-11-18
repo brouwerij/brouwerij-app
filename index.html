@@ -5,6 +5,14 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Brouwerij App</title>
 
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
+
+        <link rel="stylesheet" href="styles/definitions.css">
+        <link rel="stylesheet" href="styles/composition.css">
+        <link rel="stylesheet" href="styles/utilities.css">
+        <link rel="stylesheet" href="styles/blocks.css">
+        <link rel="stylesheet" href="styles/exceptions.css">
+
 
         <!-- The core Firebase JS SDK is always required and must be listed first -->
         <script src="https://www.gstatic.com/firebasejs/8.0.2/firebase-app.js"></script>
@@ -18,13 +26,21 @@
         <script src="https://www.gstatic.com/firebasejs/ui/4.7.1/firebase-ui-auth.js"></script>
         <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.6.1/firebase-ui-auth.css" />
         
-        <script src="brouwen.js"></script>
+        <script src="scripts/brouwen.js"></script>
 
-        <script src="firebase-conf.js"></script>
-        <script src="firebase-io.js"></script>
+        <script src="scripts/firebase-conf.js"></script>
+        <script src="scripts/firebase-io.js"></script>
     </head>
     <body onload="readFromFirebase();">
-        <h1>Brouwerij</h1>
-        <div id="steps"></div>
+        <header>
+            <h1>Brouwerij</h1>
+            <a href="#step0">Start</a>
+        </header>
+        <main id="steps">
+        </main>
+
+        <footer>
+            
+        </footer>
     </body>
 </html>
