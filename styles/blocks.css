@@ -49,8 +49,8 @@ header>a>img {
     box-shadow: 0px 0px 8px black;
     border-radius: 9999px;
     background-color: #f9b509;
-    max-height: 50%;
-    width: auto;
+    max-height: 50vh;
+    max-width: 50vh;
 }
 
 header>a>img:hover {
