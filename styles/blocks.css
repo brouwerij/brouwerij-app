@@ -39,12 +39,22 @@ header {
     text-align: center;
 }
 
-header>h1 {
-    padding: 16px;
+header>nav {
     background-color: white;
-    border-radius: 15px;
-    margin-bottom: 20px;
-    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+header>nav .menu-dropdown-btn+.menu-dropdown {
+    display: none;
+    position: absolute;
+}
+
+header>nav .menu-dropdown-btn:hover+.menu-dropdown,
+header>nav .menu-dropdown-btn+.menu-dropdown:hover {
+    display: block;
 }
 
 
