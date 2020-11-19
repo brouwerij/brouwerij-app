@@ -7,7 +7,7 @@ function visualiseSteps(parentel, steps) {
             <section id="step${i}" class="step">
                 <a href="#${prev}" class="material-icons step-btn-back">expand_less</a>
                 <div class="step-content" style="background-image: url('./images/svg/${steps[i].afbeelding}.svg');">
-                    <h1>STAP ${i+1}</h1>
+                    <h2>STAP ${i+1}</h2>
                     <p>${steps[i].stap}</p>
                 </div>
                 <a href="#step${i+1}" class="material-icons step-btn-next">expand_more</a>
@@ -16,6 +16,15 @@ function visualiseSteps(parentel, steps) {
         parentel.innerHTML += el;
     }
 
+}
+
+function visualiseRecipeLink(parentel, recipename) {
+        let el = `
+            <li>
+                <a href="?select=${recipename}">${recipename}</a>
+            </li>
+        `;
+        parentel.innerHTML += el;
 }
 
 function createBrewingStepsJSON(recipe) {

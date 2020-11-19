@@ -4,14 +4,24 @@ let recipe;
 
 function readFromFirebase() {
     return firebase.database().ref('recipes').once('value').then(function(snapshot) {
-        console.log(snapshot.val());
         recipes = snapshot;
+
+        const urlParams = new URLSearchParams(window.location.search);
+        let recipename = urlParams.get('select');
 
         snapshot.forEach(function(childSnapshot) {
             recipe = childSnapshot.val();
-            visualiseSteps(document.querySelector("#steps"), createBrewingStepsJSON(childSnapshot.val()));
-            return true;
+            visualiseRecipeLink(document.querySelector("#recipes"), recipe.naam);
         });
+
+        snapshot.forEach(function(childSnapshot) {
+            recipe = childSnapshot.val();
+            if (recipename == '' || recipename == recipe.naam) {
+                visualiseSteps(document.querySelector("#steps"), createBrewingStepsJSON(childSnapshot.val()));
+                return true;
+            }
+        });
+        
     });
 }
 

@@ -21,7 +21,7 @@ main>section.step:last-child>a.step-btn-next {
 
 main>section.step>.step-content {
     background-image: url('../images/svg/gistvat.svg');
-    background-size: auto 50%;
+    background-size: auto 33%;
     background-repeat: no-repeat;
     background-position: 50% 100%;
 }
