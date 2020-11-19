@@ -5,6 +5,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Brouwerij App</title>
 
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Capriola&family=Jua&family=Kodchasan:wght@400;700&family=Kosugi+Maru&display=swap" rel="stylesheet">
+
         <link rel="stylesheet" href="styles/definitions.css">
         <link rel="stylesheet" href="styles/composition.css">
         <link rel="stylesheet" href="styles/utilities.css">
@@ -30,9 +34,25 @@
         <script src="scripts/firebase-io.js"></script>
         <script src="scripts/firebase-auth-ui.js"></script>
     </head>
-    <body>
-        <h1>Brouwerij</h1>
-        <div id="firebaseui-auth-container"></div>
-        <div id="loader">Loading...</div>
+    <body onload="readFromFirebase();">
+        <header>
+            <nav>
+                <ul>
+                    <li class="menu-item">
+                        <span class="menu-btn menu-dropdown-btn">recepten</span>
+                        <ul id="recipes" class="menu-dropdown"></ul>
+                    </li>
+                    <li class="menu-item menu-item-right menu-item-icon">
+                        <a href="#" class="menu-btn material-icons">
+                        admin_panel_settings
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <h1>De Nonkels</h1>
+            <h2>Brouwerij</h2>
+            <div id="firebaseui-auth-container"></div>
+            <div id="loader">Loading...</div>
+        </header>
     </body>
 </html>

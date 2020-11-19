@@ -21,7 +21,7 @@ function visualiseSteps(parentel, steps) {
 function visualiseRecipeLink(parentel, recipename) {
         let el = `
             <li>
-                <a href="?select=${recipename}">${recipename}</a>
+                <a href="index.html?select=${recipename}">${recipename}</a>
             </li>
         `;
         parentel.innerHTML += el;
