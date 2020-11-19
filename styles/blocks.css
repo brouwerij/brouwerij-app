@@ -10,7 +10,7 @@ main>section.step:nth-child(even) {
 main>section.step>a {
     display: block;
     text-align: center;
-    background-color: #000;
+    background-color: #40444d;
     color: white;
 }
 
@@ -27,7 +27,7 @@ main>section.step>.step-content {
 }
 
 footer {
-    background-color: #000;
+    background-color: #40444d;
 }
 
 header {
@@ -37,6 +37,7 @@ header {
     background-position: 50% 100%;
     background-color: #c6d9d0;
     text-align: center;
+    padding-top: 40px;
 }
 
 header>nav {
@@ -47,9 +48,36 @@ header>nav {
     right: 0;
 }
 
+header>nav>ul>li {
+    display: inline-block;
+    position: relative;
+    width: 200px;
+}
+
+header>nav .menu-btn {
+    display: inline-block;
+    padding: 8px;
+}
+
+header>nav .menu-item:hover {
+    background-color: red;
+}
+
+main .step-content>h2 {
+    margin: auto;
+    width: 50%;
+    max-width: 300px;
+    background-color: #f9b509;
+    border: 8px solid #40444d;
+    color: #40444d;
+    border-radius: 20px;
+}
+
 header>nav .menu-dropdown-btn+.menu-dropdown {
     display: none;
     position: absolute;
+    background-color: white;
+    width: 100%;
 }
 
 header>nav .menu-dropdown-btn:hover+.menu-dropdown,

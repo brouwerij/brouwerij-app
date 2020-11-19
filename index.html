@@ -6,7 +6,9 @@
         <title>Brouwerij App</title>
 
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
-
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Capriola&family=Jua&family=Kodchasan:wght@400;700&family=Kosugi+Maru&display=swap" rel="stylesheet">
+        
         <link rel="stylesheet" href="styles/definitions.css">
         <link rel="stylesheet" href="styles/composition.css">
         <link rel="stylesheet" href="styles/utilities.css">
@@ -34,8 +36,12 @@
     <body onload="readFromFirebase();">
         <header>
             <nav>
-                <a href="#" class="menu-btn menu-dropdown-btn">recepten</a>
-                <ul id="recipes" class="menu-dropdown"></ul>
+                <ul>
+                    <li class="menu-item">
+                        <a href="#" class="menu-btn menu-dropdown-btn">recepten</a>
+                        <ul id="recipes" class="menu-dropdown"></ul>
+                    </li>
+                </ul>
             </nav>
             <h1>Brouwerij</h1>
             <a href="#step0"><img src="images/svg/startknop.svg"></a>
