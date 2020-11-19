@@ -6,7 +6,7 @@ function visualiseSteps(parentel, steps) {
         let el = `
             <section id="step${i}" class="step">
                 <a href="#${prev}" class="material-icons step-btn-back">expand_less</a>
-                <div class="step-content" style="background-image: url('../images/svg/${steps[i].afbeelding}.svg');">
+                <div class="step-content" style="background-image: url('./images/svg/${steps[i].afbeelding}.svg');">
                     <h1>STAP ${i+1}</h1>
                     <p>${steps[i].stap}</p>
                 </div>
