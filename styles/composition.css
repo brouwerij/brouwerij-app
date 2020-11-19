@@ -15,7 +15,7 @@ main>section.step {
 }
 
 main>section.step:first-child {
-    grid-template-rows: auto 100px;
+    grid-template-rows: 100px auto 100px;
 }
 
 main>section.step:last-child {
