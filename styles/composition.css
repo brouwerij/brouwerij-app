@@ -10,17 +10,21 @@ main>section.step {
     height: 100vh;
     display: grid;
 
-    grid-template-rows: 100px auto 100px;
-}
-
-main>section.step:first-child {
-    grid-template-rows: 100px auto 100px;
+    grid-template-rows: 50px auto 150px;
 }
 
 main>section.step:last-child {
     grid-template-rows: 100px auto;
 }
 
-main>section.step>* {
+main>section.step .step-content {
     padding: 32px;
+}
+
+main>section.step .step-btn-back {
+    padding: 16px;
+}
+
+main>section.step .step-btn-next {
+    padding: 64px;
 }
