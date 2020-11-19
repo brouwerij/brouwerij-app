@@ -16,7 +16,7 @@ function readFromFirebase() {
 
         snapshot.forEach(function(childSnapshot) {
             recipe = childSnapshot.val();
-            if (recipename == '' || recipename == recipe.naam) {
+            if (recipename == null || recipename == recipe.naam) {
                 visualiseSteps(document.querySelector("#steps"), createBrewingStepsJSON(childSnapshot.val()));
                 return true;
             }
