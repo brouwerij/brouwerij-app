@@ -55,14 +55,14 @@ h1, h2, h3 {
     line-height: 0.9;
     letter-spacing: 5px;
     font-family: serif;
-    padding: 32px 0;
+    margin: 32px 0;
     font-family: 'Kosugi Maru', sans-serif;
     font-weight: bold;
     text-align: center;
 }
 
 h1 {
-    font-size: 32px;
+    font-size: 64px;
 }
 
 h2 {
