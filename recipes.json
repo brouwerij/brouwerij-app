@@ -32,7 +32,8 @@
                     {
                         "naam": "Nothern Brewer",
                         "hoeveelheid": 20,
-                        "eenheid": "gram"
+                        "eenheid": "gram",
+                        "type": "hop"
                     }
                 ]
             },
@@ -42,7 +43,8 @@
                     {
                         "naam": "Saaz",
                         "hoeveelheid": 20,
-                        "eenheid": "gram"
+                        "eenheid": "gram",
+                        "type": "hop"
                     }
                 ]
             },
@@ -50,9 +52,10 @@
                 "tijd": 10,
                 "toevoegen": [
                     {
-                        "naam": "Nothern Brewer",
-                        "hoeveelheid": 20,
-                        "eenheid": "gram"
+                        "naam": "Suiker",
+                        "hoeveelheid": 250,
+                        "eenheid": "gram",
+                        "type": "suiker"
                     }
                 ]
             }
@@ -103,7 +106,8 @@
                     {
                         "naam": "Hallertau Perle",
                         "hoeveelheid": 20,
-                        "eenheid": "gram"
+                        "eenheid": "gram",
+                        "type": "hop"
                     }
                 ]
             }

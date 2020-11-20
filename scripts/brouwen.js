@@ -15,7 +15,53 @@ function visualiseSteps(parentel, steps) {
         `;
         parentel.innerHTML += el;
     }
+}
 
+function visualiseIngredients(parentel, recipe) {
+    console.log(recipe);
+    // mout
+    let moutEl = `<ul>`;
+    for (let i = 0; i < recipe.mout.length; ++i) {
+        moutEl += `
+            <li>
+                ${recipe.mout[i].naam}, ${recipe.mout[i].hoeveelheid} gram
+            </li>
+        `;
+    }
+    moutEl += `</ul>`;
+    parentel.innerHTML += moutEl;
+
+    // gist
+    let gistEl = `<ul>`;
+    gistEl += `
+        <li>
+            ${recipe.gist}
+        </li>
+    `;
+    gistEl += `</ul>`;
+    parentel.innerHTML += gistEl;
+
+    // hop en andere ingredienten
+    let hopEl = `<ul>`;
+    for (let i = 0; i < recipe.kookschema.length; ++i) {
+        for (let j = 0; j < recipe.kookschema[i].toevoegen.length; ++j) {
+            hopEl += `
+                <li>
+                    ${recipe.kookschema[i].toevoegen[j].naam}, ${recipe.kookschema[i].toevoegen[j].hoeveelheid} ${recipe.kookschema[i].toevoegen[j].eenheid}
+                </li>
+            `;
+        }
+    }
+    hopEl += `</ul>`;
+    parentel.innerHTML += hopEl;
+
+    // water
+    // spoelwater
+}
+
+function visualiseProcess(parentel, recipe) {
+    // maisch schema
+    // kookschema
 }
 
 function visualiseRecipeLink(parentel, recipename) {

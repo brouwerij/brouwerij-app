@@ -6,8 +6,8 @@ footer {
     height: 100px;
 }
 
-main>section.step {
-    height: 100vh;
+main>section {
+    min-height: 100vh;
     display: grid;
 
     grid-template-rows: 50px auto 150px;
@@ -21,10 +21,17 @@ main>section.step .step-content {
     padding: 32px;
 }
 
-main>section.step .step-btn-back {
+main>section .step-btn-back {
     padding: 16px;
 }
 
-main>section.step .step-btn-next {
+main>section .step-btn-next {
     padding: 64px;
+}
+
+@media only screen and (min-width: 600px) {
+    #overzicht-content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
 }

@@ -1,9 +1,9 @@
-main>section.step{
+main>section{
     position: relative;
     background-color: #e6d6a9;
 }
 
-main>section.step:nth-child(even) {
+main>section:nth-child(even) {
     background-color: #c6d9d0;
 }
 
@@ -16,7 +16,7 @@ main>section.step:nth-child(even) .step-content p {
     background-color: rgba(198,217,208, 0.5);
 }
 
-main>section.step>a {
+main>section>a {
     display: block;
     text-align: center;
     background-color: #40444d;
