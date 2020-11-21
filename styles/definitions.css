@@ -48,7 +48,7 @@ img {
 html {
     height: 100vh;
     font-family: sans-serif;
-    scroll-snap-type: y mandatory ;
+    scroll-snap-type: y proximity ;
     scroll-behavior: smooth;
 }
 
