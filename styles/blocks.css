@@ -15,6 +15,7 @@ main>section.overzicht>a.step-btn-back {
 
 #recipeName {
     font-size: 48px;
+    overflow-wrap: anywhere;
 }
 
 main>section.step {
