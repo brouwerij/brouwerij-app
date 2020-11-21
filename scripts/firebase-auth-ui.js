@@ -1,4 +1,4 @@
-var ui = new firebaseui.auth.AuthUI(firebase.auth());
+/*var ui = new firebaseui.auth.AuthUI(firebase.auth());
 
 ui.start('#firebaseui-auth-container', {
     signInOptions: [
@@ -6,7 +6,7 @@ ui.start('#firebaseui-auth-container', {
         firebase.auth.GoogleAuthProvider.PROVIDER_ID
     ],
     // Other config options...
-});
+});*/
 
 var ui = firebaseui.auth.AuthUI.getInstance() || new firebaseui.auth.AuthUI(firebase.auth());
 
@@ -20,7 +20,7 @@ var uiConfig = {
             document.querySelector("header>h1").style.display = 'none';
             document.querySelector("header>h2").style.display = 'none';
             document.querySelector("header>form#editRecipe").style.display = 'block';
-            return false;
+            return true;
         },
         uiShown: function() {
         // The widget is rendered. Hide the loader.
