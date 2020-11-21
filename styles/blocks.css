@@ -1,6 +1,12 @@
 main>section{
     position: relative;
     background-color: #e6d6a9;
+    scroll-snap-align: start end;
+}
+
+main>section ol,
+main>section ul {
+    margin-left: 16px;
 }
 
 main>section:nth-child(even) {
@@ -48,6 +54,7 @@ header {
     text-align: center;
     padding: 0 32px;
     padding-top: 64px;
+    scroll-snap-align: start end;
 }
 
 header>nav {

@@ -18,7 +18,7 @@ function visualiseSteps(parentel, steps) {
 }
 
 function visualiseIngredients(parentel, recipe) {
-    console.log(recipe);
+    // console.log(recipe);
     // mout
     let moutEl = `
     <h3>Mout</h3>
@@ -68,6 +68,44 @@ function visualiseIngredients(parentel, recipe) {
 
 function visualiseProcess(parentel, recipe) {
     // maisch schema
+    
+    // hop en andere ingredienten
+    let maischEl = `
+    <h3>Maisch Schema</h3>
+    <ol>`;
+    for (let i = 0; i < recipe.maischschema.length; ++i) {
+        maischEl += `
+            <li>
+            ${recipe.maischschema[i].temp}°, ${recipe.maischschema[i].tijd} min
+            </li>
+        `;
+    }
+    maischEl += `</ol>`;
+    parentel.innerHTML += maischEl;
+    
+    // hop en andere ingredienten
+    let kookEl = `
+    <h3>Kook Schema</h3>
+    <ol>`;
+    for (let i = 0; i < recipe.kookschema.length; ++i) {
+        let kookStepEl = `
+        <li>
+            ${recipe.kookschema[i].tijd} min koken met:
+            <ul>`;
+        for (let j = 0; j < recipe.kookschema[i].toevoegen.length; ++j) {
+            kookStepEl += `
+                <li>
+                    ${recipe.kookschema[i].toevoegen[j].naam}, ${recipe.kookschema[i].toevoegen[j].hoeveelheid} ${recipe.kookschema[i].toevoegen[j].eenheid}
+                </li>
+            `;
+        }
+        kookStepEl += `</ul>`;
+        kookEl += kookStepEl;
+    }
+    kookEl += `</ol>`;
+    parentel.innerHTML += kookEl;
+
+
     // kookschema
 }
 
