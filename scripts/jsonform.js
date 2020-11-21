@@ -222,7 +222,7 @@ jsonform.fieldTemplate = function(inner) {
     '<% if (!elt.notitle) { %>' +
       '<label for="<%= node.id %>"><%= node.title ? node.title : node.name %></label>' +
     '<% } %>' +
-    '<div class="controls">' +
+    '' +
       '<% if (node.prepend || node.append) { %>' +
       '<div class="<% if (node.prepend) { %>input-group<% } %>' +
         '<% if (node.append) { %> input-group<% } %>">' +
@@ -241,7 +241,7 @@ jsonform.fieldTemplate = function(inner) {
         '<span class="help-block"><%= node.description %></span>' +
       '<% } %>' +
       '<span class="help-block jsonform-errortext" style="display:none;"></span>' +
-    '</div></div>';
+    '</div>';
 };
 
 var fileDisplayTemplate = '<div class="_jsonform-preview">' +

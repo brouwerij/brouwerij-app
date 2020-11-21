@@ -170,62 +170,65 @@ header>a>img:hover {
 }
 
 form#editRecipe {
-
     border: 8px solid #40444d;
     border-radius: 20px;
     padding: 16px;
+    max-width: 500px;
+    margin: auto;
+    text-align: left;
     background-color: #c6d9d0;
+}
+
+form#editRecipe ._jsonform-array-buttons {
+    margin: 32px 0 8px 8px;
+    padding: 8px;
+    display: block;
+    border-left: 1px solid black;
 }
 
 form#editRecipe fieldset {
     border: none;
-    border-bottom: 4px solid #40444d;
-    border-radius: 0;
+    border-left: 1px solid black;
+    margin: 32px 0 0 8px;
 }
 
-form#editRecipe .array {
+form#editRecipe .array{
+    border: none;
     background-color: #e6d6a9;
-    border: 4px solid #40444d;
-    border-radius: 20px;
-    width: 100%;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 8px;
 }
 
-form#editRecipe .array .array {
+form#editRecipe .array .array{
     border: none;
-    border-left: 2px solid #40444d;
-    margin-left: 16px;
+    background-color: #e6d6a9;
+    border-bottom: 2px solid black;
+    margin: 0;
+    padding: 0;
     border-radius: 0;
-}
-
-form#editRecipe .controls {
-    width: calc(100% - 100px);
-}
-
-form#editRecipe .controls input {
-    width: 100%;
-    padding: 4px 8px;
-    background-color: transparent;
-    border: none;
-    border-bottom: 1px solid #40444d;
-}
-
-form#editRecipe .form-group {
-    display: flex;
-    align-items: top;
-    margin: 8px;
-}
-
-form#editRecipe .form-group .form-group {
-    display: block;
 }
 
 form#editRecipe label {
-    width: 100px;
+    width: 130px;
     display: inline-block;
+    padding: 4px 8px;
 }
 
+form#editRecipe input {
+    width: calc(100% - 140px);
+    min-width: 200px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid black;
+    padding: 4px 8px;
+    margin-left: 4px;
+}
 
-
-form#editRecipe label+.controls {
-    display: inline-block;
+form#editRecipe input[type=submit] {
+    background-color: #f9b509;
+    width: 50%;
+    margin: auto;
+    display: block;
+    margin-top: 32px;
 }
