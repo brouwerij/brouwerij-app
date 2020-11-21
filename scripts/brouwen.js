@@ -210,10 +210,10 @@ function fillForm(JSONrecipe) {
         if (errors) {
         }
         else {
-            console.log(JSON.stringify(values));
             if (values.id === '') {
                 values.id = Date.now();
             }
+            console.log(values);
             saveToFirebase(values);
         }
         }
