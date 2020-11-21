@@ -53,6 +53,46 @@
             <h2>Brouwerij</h2>
             <div id="firebaseui-auth-container"></div>
             <div id="loader">Loading...</div>
+            <form>
+                <input type="text" name="naam" id="recipeTitle" placeholder="Naam Recept">
+                <input type="number" name="water" id="recipeWater" placeholder="liter">
+                <input type="number" name="spoelwater" id="recipeSpoelWater" placeholder="liter">
+                <input type="number" name="koeltemp" id="recipeKoelTemp" placeholder="°celcius">
+                <fieldset>
+                    <legend>Mout en Granen</legend>
+                    <div>
+                        <input type="text" name="mout[0][naam]" id="recipeMout0Naam" placeholder="Naam Granen">
+                        <input type="number" name="mout[0][hoeveelheid]" id="recipeMout0Gram" placeholder="gram">
+                    </div>
+                    <button>+</button>
+                </fieldset>
+                <input type="text" name="gist" id="recipeGist" placeholder="Gist">
+                <fieldset>
+                    <legend>Maisch Schema</legend>
+                    <div>
+                        <input type="number" name="maischschema[0][temp]" id="recipeMaisch0Temp" placeholder="°celcius">
+                        <input type="number" name="maischschema[0][tijd]" id="recipeMaisch0Tijd" placeholder="minuten">
+                    </div>
+                    <button>+</button>
+                </fieldset>
+                <fieldset>
+                    <legend>Kook Schema</legend>
+                    <div>
+                        <input type="number" name="kookschema[0][tijd]" id="recipeKook0Tijd" placeholder="minuten">
+                        <fieldset>
+                            <legend>Ingredienten</legend>
+                            <div>
+                                <input type="text" name="kookschema[0][tijd]" id="recipeKook0Tijd" placeholder="Naam Ingredient">
+                                <input type="number" name="kookschema[0][tijd]" id="recipeKook0Tijd" placeholder="hoeveelheid">
+                                <input type="text" name="kookschema[0][tijd]" id="recipeKook0Tijd" placeholder="eenheid">
+                                <input type="text" name="kookschema[0][tijd]" id="recipeKook0Tijd" placeholder="type">
+                            </div>
+                            <button>+</button>
+                        </fieldset>
+                    </div>
+                    <button>+</button>
+                </fieldset>
+            </form>
         </header>
     </body>
 </html>
