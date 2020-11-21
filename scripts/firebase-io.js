@@ -40,11 +40,11 @@ function readRecipeToFormFromFirebase() {
         recipes = snapshot;
 
         const urlParams = new URLSearchParams(window.location.search);
-        let recipename = urlParams.get('select');
+        let recipeId = urlParams.get('select');
 
         let valueFound = snapshot.forEach(function(childSnapshot) {
             recipe = childSnapshot.val();
-            if (recipename == recipe.naam) {
+            if (recipeId == recipe.id) {
                 fillForm(recipe);
                 return true;
             }
