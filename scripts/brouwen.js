@@ -211,6 +211,9 @@ function fillForm(JSONrecipe) {
         }
         else {
             console.log(JSON.stringify(values));
+            if (values.id === '') {
+                values.id = Date.now();
+            }
             saveToFirebase(values);
         }
         }
