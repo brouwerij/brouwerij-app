@@ -4,6 +4,14 @@ main>section{
     scroll-snap-align: start end;
 }
 
+
+
+#ingredients,
+#brewingProcess {
+    scroll-snap-align: start end;
+    scroll-margin: 70px;
+}
+
 main>section ol,
 main>section ul {
     margin-left: 16px;
@@ -13,8 +21,7 @@ main>section.overzicht>a.step-btn-back {
     visibility: hidden;
 } 
 
-main>section>a.step-btn-back,
-main>section>a.step-btn-next {
+main>section.step {
     z-index: 3;
 } 
 
@@ -92,7 +99,7 @@ header>nav .menu-item:hover {
 
 main .step-content>h2 {
     margin: auto;
-    width: 50%;
+    width: 70%;
     max-width: 300px;
     background-color: #f9b509;
     border: 8px solid #40444d;
