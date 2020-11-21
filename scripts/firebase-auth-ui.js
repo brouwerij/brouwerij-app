@@ -11,6 +11,7 @@ ui.start('#firebaseui-auth-container', {
 firebase.auth().onAuthStateChanged(function(user) {
     if (user) {
         console.log("succes");
+        document.getElementById('loader').style.display = 'none';
         document.querySelector("header>h1").style.display = 'none';
         document.querySelector("header>h2").style.display = 'none';
         document.querySelector("header>form#editRecipe").style.display = 'block';
