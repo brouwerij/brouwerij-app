@@ -19,13 +19,13 @@ var uiConfig = {
             console.log("succes");
             document.querySelector("header>h1").style.display = 'none';
             document.querySelector("header>h2").style.display = 'none';
-            document.querySelector("header>form").style.display = 'block';
+            document.querySelector("header>form#editRecipe").style.display = 'block';
             return false;
         },
         uiShown: function() {
         // The widget is rendered. Hide the loader.
         document.getElementById('loader').style.display = 'none';
-        document.querySelector("header>form").style.display = 'none';
+        document.querySelector("header>form#editRecipe").style.display = 'none';
         }
     },
     // Will use popup for IDP Providers sign-in flow instead of the default, redirect.
