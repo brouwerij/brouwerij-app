@@ -9,6 +9,15 @@ main>section ul {
     margin-left: 16px;
 }
 
+main>section.overzicht>a.step-btn-back {
+    visibility: hidden;
+} 
+
+main>section>a.step-btn-back,
+main>section>a.step-btn-next {
+    z-index: 3;
+} 
+
 main>section:nth-child(even) {
     background-color: #c6d9d0;
 }
@@ -64,6 +73,7 @@ header>nav {
     left: 0;
     right: 0;
     color: #f9b509;
+    z-index: 2;
 }
 
 header>nav>ul>li {

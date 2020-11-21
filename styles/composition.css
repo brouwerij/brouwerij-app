@@ -30,9 +30,29 @@ main>section .step-btn-next {
     padding: 64px;
 }
 
+.overzicht-content>.start-btn>img {
+    max-height: 200px;
+}
+
 @media only screen and (min-width: 600px) {
     .overzicht-content {
         display: grid;
+        grid-template-rows: 200px auto;
         grid-template-columns: 1fr 1fr;
+
+        grid-template-areas: "button button"
+                             "ingredients proces";
+    }
+
+    .overzicht-content>.start-btn {
+        grid-area: button;
+    }
+
+    #ingredients {
+        grid-area: ingredients;
+    }
+
+    #brewingProcess {
+        grid-area: proces;
     }
 }
