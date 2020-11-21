@@ -168,3 +168,64 @@ header>a>img {
 header>a>img:hover {
     box-shadow: 0px 0px 16px black;
 }
+
+form#editRecipe {
+
+    border: 8px solid #40444d;
+    border-radius: 20px;
+    padding: 16px;
+    background-color: #c6d9d0;
+}
+
+form#editRecipe fieldset {
+    border: none;
+    border-bottom: 4px solid #40444d;
+    border-radius: 0;
+}
+
+form#editRecipe .array {
+    background-color: #e6d6a9;
+    border: 4px solid #40444d;
+    border-radius: 20px;
+    width: 100%;
+}
+
+form#editRecipe .array .array {
+    border: none;
+    border-left: 2px solid #40444d;
+    margin-left: 16px;
+    border-radius: 0;
+}
+
+form#editRecipe .controls {
+    width: calc(100% - 100px);
+}
+
+form#editRecipe .controls input {
+    width: 100%;
+    padding: 4px 8px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #40444d;
+}
+
+form#editRecipe .form-group {
+    display: flex;
+    align-items: top;
+    margin: 8px;
+}
+
+form#editRecipe .form-group .form-group {
+    display: block;
+}
+
+form#editRecipe label {
+    width: 100px;
+    display: inline-block;
+}
+
+
+
+form#editRecipe label+.controls {
+    display: inline-block;
+}

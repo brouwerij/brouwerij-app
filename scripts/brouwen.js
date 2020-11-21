@@ -129,8 +129,40 @@ function fillForm(JSONrecipe) {
             "koeltemp": {
                 "type": "integer"
             },
+            "mout": {
+                "type": "array",
+                "items": {
+                    "type": "object",
+                    "properties": {
+                        "naam": {
+                            "type": "string",
+                            "title": "naam"
+                        },
+                        "hoeveelheid": {
+                            "type": "integer",
+                            "title": "hoeveelheid"
+                        }
+                    }
+                }
+            },
             "gist": {
                 "type": "string"
+            },
+            "maischschema": {
+                "type": "array",
+                "items": {
+                    "type": "object",
+                    "properties": {
+                        "temp": {
+                            "type": "integer",
+                            "title": "temperatuur"
+                        },
+                        "tijd": {
+                            "type": "integer",
+                            "title": "tijd"
+                        }
+                    }
+                }
             },
             "kookschema": {
                 "type": "array",
@@ -143,7 +175,7 @@ function fillForm(JSONrecipe) {
                         },
                         "toevoegen": {
                             "type": "array",
-                            "title": "toevoegen",
+                            "title": "ingredienten",
                             "items": {
                                 "type": "object",
                                 "properties": {
@@ -165,38 +197,6 @@ function fillForm(JSONrecipe) {
                                     }
                                 }
                             }
-                        }
-                    }
-                }
-            },
-            "mout": {
-                "type": "array",
-                "items": {
-                    "type": "object",
-                    "properties": {
-                        "naam": {
-                            "type": "string",
-                            "title": "naam"
-                        },
-                        "hoeveelheid": {
-                            "type": "integer",
-                            "title": "hoeveelheid"
-                        }
-                    }
-                }
-            },
-            "maischschema": {
-                "type": "array",
-                "items": {
-                    "type": "object",
-                    "properties": {
-                        "temp": {
-                            "type": "integer",
-                            "title": "temperatuur"
-                        },
-                        "tijd": {
-                            "type": "integer",
-                            "title": "tijd"
                         }
                     }
                 }

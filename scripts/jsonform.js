@@ -852,7 +852,7 @@ jsonform.elementTypes = {
     }
   },
   'array': {
-    'template': '<div id="<%= id %>"><ul class="_jsonform-array-ul" style="list-style-type:none;"><%= children %></ul>' +
+    'template': '<div id="<%= id %>" class="array"><ul class="_jsonform-array-ul" style="list-style-type:none;"><%= children %></ul>' +
       '<span class="_jsonform-array-buttons">' +
         '<a href="#" class="btn btn-default _jsonform-array-addmore material-icons">add_circle_outline</a> ' +
         '<a href="#" class="btn btn-default _jsonform-array-deletelast material-icons">remove_circle_outline</a>' +
