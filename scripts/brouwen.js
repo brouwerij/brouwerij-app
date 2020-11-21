@@ -20,7 +20,10 @@ function visualiseSteps(parentel, steps) {
 function visualiseIngredients(parentel, recipe) {
     console.log(recipe);
     // mout
-    let moutEl = `<ul>`;
+    let moutEl = `
+    <h3>Mout</h3>
+    <ul>
+    `;
     for (let i = 0; i < recipe.mout.length; ++i) {
         moutEl += `
             <li>
@@ -32,7 +35,9 @@ function visualiseIngredients(parentel, recipe) {
     parentel.innerHTML += moutEl;
 
     // gist
-    let gistEl = `<ul>`;
+    let gistEl = `
+    <h3>Gist</h3>
+    <ul>`;
     gistEl += `
         <li>
             ${recipe.gist}
@@ -42,7 +47,9 @@ function visualiseIngredients(parentel, recipe) {
     parentel.innerHTML += gistEl;
 
     // hop en andere ingredienten
-    let hopEl = `<ul>`;
+    let hopEl = `
+    <h3>Hop en andere ingredienten</h3>
+    <ul>`;
     for (let i = 0; i < recipe.kookschema.length; ++i) {
         for (let j = 0; j < recipe.kookschema[i].toevoegen.length; ++j) {
             hopEl += `

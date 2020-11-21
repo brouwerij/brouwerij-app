@@ -2,7 +2,7 @@
 let recipes;
 let recipe;
 
-function readFromFirebase() {
+function readMenuFromFirebase() {
     return firebase.database().ref('recipes').once('value').then(function(snapshot) {
         recipes = snapshot;
 
@@ -13,6 +13,16 @@ function readFromFirebase() {
             recipe = childSnapshot.val();
             visualiseRecipeLink(document.querySelector("#recipes"), recipe.naam);
         });
+        
+    });
+}
+
+function readRecipeFromFirebase() {
+    return firebase.database().ref('recipes').once('value').then(function(snapshot) {
+        recipes = snapshot;
+
+        const urlParams = new URLSearchParams(window.location.search);
+        let recipename = urlParams.get('select');
 
         snapshot.forEach(function(childSnapshot) {
             recipe = childSnapshot.val();
