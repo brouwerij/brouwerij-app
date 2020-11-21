@@ -15,6 +15,16 @@
         <link rel="stylesheet" href="styles/blocks.css">
         <link rel="stylesheet" href="styles/exceptions.css">
 
+        <script
+            src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+            integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs="
+            crossorigin="anonymous"></script>
+        <script 
+            src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.11.0/underscore-min.js" 
+            integrity="sha512-wBiNJt1JXeA/ra9F8K2jyO4Bnxr0dRPsy7JaMqSlxqTjUGHe1Z+Fm5HMjCWqkIYvp/oCbdJEivZ5pLvAtK0csQ==" 
+            crossorigin="anonymous"></script>
+        <script type="text/javascript" src="scripts/jsonform.js"></script>
+
 
         <!-- The core Firebase JS SDK is always required and must be listed first -->
         <script src="https://www.gstatic.com/firebasejs/8.0.2/firebase-app.js"></script>
@@ -34,17 +44,22 @@
         <script src="scripts/firebase-io.js"></script>
         <script src="scripts/firebase-auth-ui.js"></script>
     </head>
-    <body onload="readMenuFromFirebase();">
+    <body onload="readMenuFromFirebase();  readRecipeToFormFromFirebase();" class="admin">
         <header>
             <nav>
                 <ul>
                     <li class="menu-item">
                         <span class="menu-btn menu-dropdown-btn">recepten</span>
-                        <ul id="recipes" class="menu-dropdown"></ul>
+                        <ul id="recipes" class="menu-dropdown">
+                            <li>
+                                <a href="admin.html">nieuw</a>
+                                <hr>
+                            </li>
+                        </ul>
                     </li>
                     <li class="menu-item menu-item-right menu-item-icon">
                         <a href="#" class="menu-btn material-icons">
-                        admin_panel_settings
+                            admin_panel_settings
                         </a>
                     </li>
                 </ul>
@@ -53,46 +68,11 @@
             <h2>Brouwerij</h2>
             <div id="firebaseui-auth-container"></div>
             <div id="loader">Loading...</div>
-            <form>
-                <input type="text" name="naam" id="recipeTitle" placeholder="Naam Recept">
-                <input type="number" name="water" id="recipeWater" placeholder="liter">
-                <input type="number" name="spoelwater" id="recipeSpoelWater" placeholder="liter">
-                <input type="number" name="koeltemp" id="recipeKoelTemp" placeholder="°celcius">
-                <fieldset>
-                    <legend>Mout en Granen</legend>
-                    <div>
-                        <input type="text" name="mout[0][naam]" id="recipeMout0Naam" placeholder="Naam Granen">
-                        <input type="number" name="mout[0][hoeveelheid]" id="recipeMout0Gram" placeholder="gram">
-                    </div>
-                    <button>+</button>
-                </fieldset>
-                <input type="text" name="gist" id="recipeGist" placeholder="Gist">
-                <fieldset>
-                    <legend>Maisch Schema</legend>
-                    <div>
-                        <input type="number" name="maischschema[0][temp]" id="recipeMaisch0Temp" placeholder="°celcius">
-                        <input type="number" name="maischschema[0][tijd]" id="recipeMaisch0Tijd" placeholder="minuten">
-                    </div>
-                    <button>+</button>
-                </fieldset>
-                <fieldset>
-                    <legend>Kook Schema</legend>
-                    <div>
-                        <input type="number" name="kookschema[0][tijd]" id="recipeKook0Tijd" placeholder="minuten">
-                        <fieldset>
-                            <legend>Ingredienten</legend>
-                            <div>
-                                <input type="text" name="kookschema[0][tijd]" id="recipeKook0Tijd" placeholder="Naam Ingredient">
-                                <input type="number" name="kookschema[0][tijd]" id="recipeKook0Tijd" placeholder="hoeveelheid">
-                                <input type="text" name="kookschema[0][tijd]" id="recipeKook0Tijd" placeholder="eenheid">
-                                <input type="text" name="kookschema[0][tijd]" id="recipeKook0Tijd" placeholder="type">
-                            </div>
-                            <button>+</button>
-                        </fieldset>
-                    </div>
-                    <button>+</button>
-                </fieldset>
+            <form id="editRecipe">
             </form>
         </header>
+
+        <script type="text/javascript">
+          </script>
     </body>
 </html>

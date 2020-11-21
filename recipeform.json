@@ -1,0 +1,87 @@
+{
+    "schema": {
+        "naam": {
+            "type": "string"
+        },
+        "water": {
+            "type": "integer"
+        },
+        "spoelwater": {
+            "type": "integer"
+        },
+        "koeltemp": {
+            "type": "integer"
+        },
+        "gist": {
+            "type": "string"
+        },
+        "kookschema": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "tijd": {
+                        "type": "integer",
+                        "title": "tijd"
+                    },
+                    "toevoegen": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "naam": {
+                                    "type": "string",
+                                    "title": "naam"
+                                },
+                                "hoeveelheid": {
+                                    "type": "integer",
+                                    "title": "hoeveelheid"
+                                },
+                                "eenheid": {
+                                    "type": "string",
+                                    "title": "eenheid"
+                                },
+                                "type": {
+                                    "type": "string",
+                                    "title": "type"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "mout": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "naam": {
+                        "type": "string",
+                        "title": "naam"
+                    },
+                    "hoeveelheid": {
+                        "type": "integer",
+                        "title": "hoeveelheid"
+                    }
+                }
+            }
+        },
+        "maischschema": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "temp": {
+                        "type": "integer",
+                        "title": "temperatuur"
+                    },
+                    "tijd": {
+                        "type": "integer",
+                        "title": "tijd"
+                    }
+                }
+            }
+        }
+    }
+}

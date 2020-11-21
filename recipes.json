@@ -4,13 +4,13 @@
         "water": 15,
         "spoelwater": 10,
         "koeltemp": 22,
+        "gist": "Danstar Nottingham",
         "mout": [
             {
                 "naam": "Pilsmout",
                 "hoeveelheid": 5000
             }
         ],
-        "gist": "Danstar Nottingham",
         "maischschema": [
             {
                 "temp": 62,

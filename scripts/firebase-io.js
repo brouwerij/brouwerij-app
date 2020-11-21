@@ -37,9 +37,31 @@ function readRecipeFromFirebase() {
     });
 }
 
+function readRecipeToFormFromFirebase() {
+    return firebase.database().ref('recipes').once('value').then(function(snapshot) {
+        recipes = snapshot;
 
-function saveToFirebase() {
-    let JSONrecipes = [
+        const urlParams = new URLSearchParams(window.location.search);
+        let recipename = urlParams.get('select');
+
+        let valueFound = snapshot.forEach(function(childSnapshot) {
+            recipe = childSnapshot.val();
+            if (recipename == recipe.naam) {
+                fillForm(recipe);
+                return true;
+            }
+        });
+
+        if (valueFound === false) {
+            fillForm();
+        }
+        
+    });
+}
+
+
+function saveToFirebase(JSONrecipe) {
+    /*let JSONrecipes = [
         {
             "naam": "Tripel Pils Nottingham",
             "water": 15,
@@ -154,10 +176,10 @@ function saveToFirebase() {
                 }
             ]
         }
-    ];
+    ];*/
 
-    for (let i = 0; i < JSONrecipes.length; ++i) {
-        let JSONrecipe = JSONrecipes[i];
+    /*for (let i = 0; i < JSONrecipes.length; ++i) {
+        let JSONrecipe = JSONrecipes[i];*/
 
         firebase.database().ref('recipes').child(JSONrecipe.naam).set(JSONrecipe)
             .then(function(snapshot) {
@@ -166,5 +188,5 @@ function saveToFirebase() {
                 console.log('error' + error);
                 //error(); // some error method
             });
-    }
+    //}
 }

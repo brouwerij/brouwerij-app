@@ -109,10 +109,115 @@ function visualiseProcess(parentel, recipe) {
     // kookschema
 }
 
+function fillForm(JSONrecipe) {
+    let form = document.querySelector("form#editRecipe");
+    if (form == null) {
+        return;
+    }
+
+    $("form").jsonForm({
+        "schema": {
+            "naam": {
+                "type": "string"
+            },
+            "water": {
+                "type": "integer"
+            },
+            "spoelwater": {
+                "type": "integer"
+            },
+            "koeltemp": {
+                "type": "integer"
+            },
+            "gist": {
+                "type": "string"
+            },
+            "kookschema": {
+                "type": "array",
+                "items": {
+                    "type": "object",
+                    "properties": {
+                        "tijd": {
+                            "type": "integer",
+                            "title": "tijd"
+                        },
+                        "toevoegen": {
+                            "type": "array",
+                            "title": "toevoegen",
+                            "items": {
+                                "type": "object",
+                                "properties": {
+                                    "naam": {
+                                        "type": "string",
+                                        "title": "naam"
+                                    },
+                                    "hoeveelheid": {
+                                        "type": "integer",
+                                        "title": "hoeveelheid"
+                                    },
+                                    "eenheid": {
+                                        "type": "string",
+                                        "title": "eenheid"
+                                    },
+                                    "type": {
+                                        "type": "string",
+                                        "title": "type"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "mout": {
+                "type": "array",
+                "items": {
+                    "type": "object",
+                    "properties": {
+                        "naam": {
+                            "type": "string",
+                            "title": "naam"
+                        },
+                        "hoeveelheid": {
+                            "type": "integer",
+                            "title": "hoeveelheid"
+                        }
+                    }
+                }
+            },
+            "maischschema": {
+                "type": "array",
+                "items": {
+                    "type": "object",
+                    "properties": {
+                        "temp": {
+                            "type": "integer",
+                            "title": "temperatuur"
+                        },
+                        "tijd": {
+                            "type": "integer",
+                            "title": "tijd"
+                        }
+                    }
+                }
+            }
+        },
+        "value": JSONrecipe,
+        onSubmit: function (errors, values) {
+        if (errors) {
+        }
+        else {
+            console.log(JSON.stringify(values));
+            saveToFirebase(values);
+        }
+        }
+    });
+}
+
 function visualiseRecipeLink(parentel, recipename) {
         let el = `
             <li>
-                <a href="index.html?select=${recipename}">${recipename}</a>
+                <a href="?select=${recipename}">${recipename}</a>
             </li>
         `;
         parentel.innerHTML += el;
