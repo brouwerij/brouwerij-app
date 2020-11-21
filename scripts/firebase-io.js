@@ -179,7 +179,7 @@ function saveToFirebase(JSONrecipe) {
     /*for (let i = 0; i < JSONrecipes.length; ++i) {
         let JSONrecipe = JSONrecipes[i];*/
 
-        firebase.database().ref('recipes').child(JSONrecipe.naam).set(JSONrecipe)
+        firebase.database().ref('recipes').child(JSONrecipe.id).set(JSONrecipe)
             .then(function(snapshot) {
                 //success(); // some success method
             }, function(error) {
