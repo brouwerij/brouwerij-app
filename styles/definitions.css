@@ -52,11 +52,6 @@ html {
     scroll-behavior: smooth;
 }
 
-body {
-    scroll-snap-type: y mandatory ;
-    scroll-behavior: smooth;
-}
-
 p {
     font-size: 18px;
 }
