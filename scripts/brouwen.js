@@ -1,7 +1,7 @@
 function visualiseSteps(parentel, steps) {
 
     for (let i = 0; i < steps.length; ++i) {
-        let prev = i === 0 ? "" : `step${i-1}`;
+        let prev = i === 0 ? "overzicht" : `step${i-1}`;
 
         let el = `
             <section id="step${i}" class="step">

@@ -37,11 +37,9 @@ main>section .step-btn-next {
 @media only screen and (min-width: 600px) {
     .overzicht-content {
         display: grid;
-        grid-template-rows: 200px auto;
         grid-template-columns: 1fr 1fr;
 
-        grid-template-areas: "button button"
-                             "ingredients proces";
+        grid-template-areas: "ingredients proces";
     }
 
     .overzicht-content>.start-btn {
