@@ -120,6 +120,9 @@ function fillForm(JSONrecipe) {
             "naam": {
                 "type": "string"
             },
+            "id": {
+                "type": "hidden"
+            },
             "water": {
                 "type": "integer"
             },
