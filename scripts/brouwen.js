@@ -18,7 +18,6 @@ function visualiseSteps(parentel, steps) {
 }
 
 function visualiseIngredients(parentel, recipe) {
-    // console.log(recipe);
     // mout
     let moutEl = `
     <h3>Mout</h3>
@@ -104,9 +103,6 @@ function visualiseProcess(parentel, recipe) {
     }
     kookEl += `</ol>`;
     parentel.innerHTML += kookEl;
-
-
-    // kookschema
 }
 
 function fillForm(JSONrecipe) {
@@ -220,10 +216,10 @@ function fillForm(JSONrecipe) {
     });
 }
 
-function visualiseRecipeLink(parentel, recipename) {
+function visualiseRecipeLink(parentel, recipename, recipeId) {
         let el = `
             <li>
-                <a href="?select=${recipename}#overzicht">${recipename}</a>
+                <a href="?select=${recipeId}#overzicht">${recipename}</a>
             </li>
         `;
         parentel.innerHTML += el;

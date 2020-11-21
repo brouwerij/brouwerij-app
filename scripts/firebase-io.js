@@ -6,12 +6,9 @@ function readMenuFromFirebase() {
     return firebase.database().ref('recipes').once('value').then(function(snapshot) {
         recipes = snapshot;
 
-        const urlParams = new URLSearchParams(window.location.search);
-        let recipename = urlParams.get('select');
-
         snapshot.forEach(function(childSnapshot) {
             recipe = childSnapshot.val();
-            visualiseRecipeLink(document.querySelector("#recipes"), recipe.naam);
+            visualiseRecipeLink(document.querySelector("#recipes"), recipe.naam, recipe.id);
         });
         
     });
@@ -22,11 +19,11 @@ function readRecipeFromFirebase() {
         recipes = snapshot;
 
         const urlParams = new URLSearchParams(window.location.search);
-        let recipename = urlParams.get('select');
+        let recipeId = urlParams.get('select');
 
         snapshot.forEach(function(childSnapshot) {
             recipe = childSnapshot.val();
-            if (recipename == null || recipename == recipe.naam) {
+            if (recipeId == null || recipeId == recipe.id) {
                 document.querySelector("#recipeName").innerHTML = childSnapshot.val().naam;
                 visualiseIngredients(document.querySelector("#ingredients"), childSnapshot.val());
                 visualiseProcess(document.querySelector("#brewingProcess"), childSnapshot.val());
