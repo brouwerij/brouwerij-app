@@ -20,7 +20,6 @@ main>section.overzicht>a.step-btn-back {
 } 
 
 main>section.step {
-    z-index: 3;
 } 
 
 main>section:nth-child(even) {
@@ -81,7 +80,6 @@ header>nav {
     left: 0;
     right: 0;
     color: #f9b509;
-    z-index: 2;
 }
 
 header>nav>ul>li {
