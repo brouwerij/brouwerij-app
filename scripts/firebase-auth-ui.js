@@ -20,7 +20,7 @@ var uiConfig = {
             document.querySelector("header>h1").style.display = 'none';
             document.querySelector("header>h2").style.display = 'none';
             document.querySelector("header>form#editRecipe").style.display = 'block';
-            return true;
+            return false;
         },
         uiShown: function() {
         // The widget is rendered. Hide the loader.
