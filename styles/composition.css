@@ -37,13 +37,15 @@ main>section .step-btn-next {
 @media only screen and (min-width: 600px) {
     .overzicht-content {
         display: grid;
+        grid-template-rows: 100px auto;
         grid-template-columns: 1fr 1fr;
 
-        grid-template-areas: "ingredients proces";
+        grid-template-areas: "title title"
+                             "ingredients proces";
     }
 
-    .overzicht-content>.start-btn {
-        grid-area: button;
+    #recipeName {
+        grid-area: title;
     }
 
     #ingredients {

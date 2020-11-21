@@ -13,6 +13,10 @@ main>section.overzicht>a.step-btn-back {
     visibility: hidden;
 } 
 
+#recipeName {
+    font-size: 48px;
+}
+
 main>section.step {
     z-index: 3;
 } 
