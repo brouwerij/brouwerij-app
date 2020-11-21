@@ -115,7 +115,7 @@ function fillForm(JSONrecipe) {
         return;
     }
 
-    $("form").jsonForm({
+    $("form#editRecipe").jsonForm({
         "schema": {
             "naam": {
                 "type": "string"
