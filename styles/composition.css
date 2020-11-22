@@ -6,6 +6,82 @@ footer {
     height: 100px;
 }
 
+main>section ol,
+main>section ul {
+    margin-left: 16px;
+}
+
+header {
+    padding: 32px 32px;
+    padding-top: 64px;
+}
+
+header>nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+
+header>nav>ul>li {
+    display: inline-block;
+    position: relative;
+    width: 200px;
+}
+
+main>section>a {
+    display: block;
+}
+
+main>section.step .step-content p {
+    position: relative;
+}
+
+main .step-content>h2 {
+    margin: auto;
+    width: 70%;
+    max-width: 300px;
+    margin-bottom: 32px;
+    padding: 32px 0;
+}
+
+header>nav .menu-btn {
+    display: inline-block;
+    padding: 16px;
+    width: 100%;
+    height: 100%;
+}
+
+header>nav .menu-dropdown-btn+.menu-dropdown {
+    display: none;
+    position: absolute;
+    width: 100%;
+    padding: 8px;
+}
+
+header>nav .menu-dropdown-btn+.menu-dropdown>li>a {
+    padding: 8px;
+    display: block;
+}
+
+header>nav .menu-dropdown-btn:hover+.menu-dropdown,
+header>nav .menu-dropdown-btn+.menu-dropdown:hover {
+    display: block;
+}
+
+
+header>a{
+    height:0;
+    display: block;
+}
+
+header>a>img {
+    max-height: inherit;
+    width: 50vw;
+    max-width: 500px;
+}
+
 main>section {
     min-height: 100vh;
     display: grid;
@@ -35,6 +111,53 @@ main>section .step-btn-next {
 
 .overzicht-content>.start-btn>img {
     max-height: 200px;
+}
+
+
+
+form#editRecipe {
+    padding: 16px;
+    max-width: 500px;
+    margin: auto;
+}
+
+form#editRecipe ._jsonform-array-buttons {
+    margin: 32px 0 8px 8px;
+    padding: 8px;
+    display: block;
+}
+
+form#editRecipe fieldset {
+    margin: 32px 0 0 8px;
+}
+
+form#editRecipe .array{
+    padding: 8px;
+}
+
+form#editRecipe .array .array{
+    margin: 0;
+    padding: 0;
+}
+
+form#editRecipe label {
+    width: 130px;
+    display: inline-block;
+    padding: 4px 8px;
+}
+
+form#editRecipe input {
+    width: calc(100% - 140px);
+    min-width: 200px;
+    padding: 4px 8px;
+    margin-left: 4px;
+}
+
+form#editRecipe input[type=submit] {
+    width: 50%;
+    margin: auto;
+    display: block;
+    margin-top: 32px;
 }
 
 @media only screen and (min-width: 600px) {
