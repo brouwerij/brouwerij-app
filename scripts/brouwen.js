@@ -120,13 +120,16 @@ function fillForm(JSONrecipe) {
                 "type": "hidden"
             },
             "water": {
-                "type": "integer"
+                "type": "integer",
+                "placeholder": "liter"
             },
             "spoelwater": {
-                "type": "integer"
+                "type": "integer",
+                "placeholder": "liter"
             },
             "koeltemp": {
-                "type": "integer"
+                "type": "integer",
+                "placeholder": "° Celcius"
             },
             "mout": {
                 "type": "array",
@@ -149,22 +152,26 @@ function fillForm(JSONrecipe) {
             },
             "maischschema": {
                 "type": "array",
+                "htmlClass": "brewsection",
                 "items": {
                     "type": "object",
                     "properties": {
                         "temp": {
                             "type": "integer",
-                            "title": "temperatuur"
+                            "title": "temperatuur",
+                            "placeholder": "° Celcius"
                         },
                         "tijd": {
                             "type": "integer",
-                            "title": "tijd"
+                            "title": "tijd",
+                            "placeholder": "minuten"
                         }
                     }
                 }
             },
             "kookschema": {
                 "type": "array",
+                "htmlClass": "brewsection",
                 "items": {
                     "type": "object",
                     "properties": {
@@ -175,6 +182,7 @@ function fillForm(JSONrecipe) {
                         "toevoegen": {
                             "type": "array",
                             "title": "ingredienten",
+                            "htmlClass": "brewsection",
                             "items": {
                                 "type": "object",
                                 "properties": {
@@ -184,15 +192,18 @@ function fillForm(JSONrecipe) {
                                     },
                                     "hoeveelheid": {
                                         "type": "integer",
-                                        "title": "hoeveelheid"
+                                        "title": "hoeveelheid",
+                                        "placeholder": 0
                                     },
                                     "eenheid": {
                                         "type": "string",
-                                        "title": "eenheid"
+                                        "title": "eenheid",
+                                        "placeholder": "bv. gram"
                                     },
                                     "type": {
                                         "type": "string",
-                                        "title": "type"
+                                        "title": "type",
+                                        "placeholder": "bv. hop, suiker, andere, ..."
                                     }
                                 }
                             }
