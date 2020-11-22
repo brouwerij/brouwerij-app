@@ -75,7 +75,7 @@ function visualiseProcess(parentel, recipe) {
     for (let i = 0; i < recipe.maischschema.length; ++i) {
         maischEl += `
             <li>
-            ${recipe.maischschema[i].temp}°, ${recipe.maischschema[i].tijd} min
+            ${recipe.maischschema[i].temp}°C, ${recipe.maischschema[i].tijd} min
             </li>
         `;
     }
