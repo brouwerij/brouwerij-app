@@ -365,7 +365,7 @@ function createBrewingStepsJSON(recipe) {
             "afbeelding": "kookketel-naar-gistvat"
         },
         {
-            "stap": `Gist toevoegen aan het gistvat en gistvat afsluiten`,
+            "stap": `Gist toevoegen aan het gistvat en gistvat afsluiten met een waterslot`,
             "afbeelding": "gistvat-gist-toevoegen"
         },
         {
