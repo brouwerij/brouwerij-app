@@ -1,0 +1,123 @@
+{
+    "variabelen": {
+        "waterInWaterketel": 20
+    },
+    "stappen": [
+        {
+            "tekst": "Gistvat desinfecteren en koeler desinfecteren",
+            "afbeelding": "gistvat-koeler"
+        },
+        {
+            "tekst": "Mout schroten",
+            "afbeelding": "schrootmolen"
+        },
+        {
+            "tekst": "Waterketel vullen met ${recipe.water + recipe.spoelwater}L water",
+            "afbeelding": "waterketel-vullen"
+        },
+        {
+            "tekst": "${recipe.water}L water uit waterketel overbrengen naar maischketel",
+            "afbeelding": "waterketel-naar-maischketel"
+        },
+        {
+            "tekst": "Branders van waterketel en maischketel aanzetten",
+            "afbeelding": "branders-waterketel-maischketel"
+        },
+        {
+            "tekst": "Water in waterketel verwarmen tot 80 graden",
+            "afbeelding": "waterketel-opwarmen"
+        },
+        {
+            "tekst": "Water maischketel verwarmen tot ${recipe.maischschema[0].temp + 2} graden",
+            "afbeelding": "maischketel-opwarmen"
+        },
+        {
+            "tekst": "Brander maischketel uitzetten",
+            "afbeelding": "brander-maischketel-uitzetten"
+        },
+        {
+            "tekst": "Geschrote mout toevoegen aan maischketel en roeren",
+            "afbeelding": "mout-naar-maischketel"
+        },
+        {
+            "tekst": "maischen",
+            "afbeelding": "mout-naar-maischketel",
+            "stappen": [
+                {
+                    "tekst": "Maisch ${recipe.maischschema[i].tijd} minuten op ${recipe.maischschema[i].temp} graden houden",
+                    "afbeelding": "maischketel-warmhouden"
+                },
+                {
+                    "tekst": "Maisch verwarmen tot ${recipe.maischschema[i+1].temp} graden",
+                    "afbeelding": "maischketel-opwarmen"
+                }
+            ]
+        },
+        {
+            "tekst": "Maischketel 1 liter aftappen in maatbeker",
+            "afbeelding": "maischketel-naar-maatbeker"
+        },
+        {
+            "tekst": "Troebel? Voorzichtig terug in maischketel gieten en herhaal",
+            "afbeelding": "wort-naar-maischketel"
+        },
+        {
+            "tekst": "Niet troebel? Brander kookketel aanzetten en maisch Voorzichtig in kookketel laten lopen. Het bostel mag niet droog komen te staan!",
+            "afbeelding": "maischketel-naar-kookketel"
+        },
+        {
+            "tekst": "Water in maischketel is gezakt tot vlak boven graanresten (bostel)? Voeg voorzichtig spoelwater toe in stappen van 5 liter. Herhaal tot spoelwater op is of ketel vol is",
+            "afbeelding": "spoelwater-toevoegen"
+        },
+        {
+            "tekst": "Laat maischketel helemaal leeglopen tot de wort troebel is, draai dan de kraan toe",
+            "afbeelding": "maischketel-naar-kookketel"
+        },
+        {
+            "tekst": "koken",
+            "afbeelding": "mout-naar-maischketel",
+            "stappen": [
+                {
+                    "tekst": "${ingredienten.join(', ')} toevoegen aan kookketel",
+                    "afbeelding": "toevoegen-aan-kookketel"
+                },
+                {
+                    "tekst": "Wort in de kookketel laten koken (max 102 graden) gedurende ${recipe.kookschema[i].tijd} minuten",
+                    "afbeelding": "kookketel-koken"
+                }
+            ]
+        },
+        {
+            "tekst": "Koeler in kookketel plaatsen en mee laten koken",
+            "afbeelding": "koeler-in-kookketel"
+        },
+        {
+            "tekst": "Wort in de kookketel laten koken (max 102 graden) gedurende 10 minuten",
+            "afbeelding": "kookketel-koken"
+        },
+        {
+            "tekst": "Brander kookketel uitzetten",
+            "afbeelding": "brander-kookketel-uitzetten"
+        },
+        {
+            "tekst": "Koeler aansluiten en 5 minuten wachten",
+            "afbeelding": "koeler-aansluiten"
+        },
+        {
+            "tekst": "Wort afkoelen tot [22] graden",
+            "afbeelding": "wort-koelen"
+        },
+        {
+            "tekst": "Wort voorzichtig in gistvat laten lopen",
+            "afbeelding": "kookketel-naar-gistvat"
+        },
+        {
+            "tekst": "Gist toevoegen aan het gistvat en gistvat afsluiten met een waterslot",
+            "afbeelding": "gistvat-gist-toevoegen"
+        },
+        {
+            "tekst": "Schoonmaken",
+            "afbeelding": "brouwproces-2"
+        }
+    ]
+}
