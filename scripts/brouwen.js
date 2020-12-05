@@ -4,9 +4,9 @@ function visualiseSteps(parentel, steps) {
         let prev = i === 0 ? "overzicht" : `step${i-1}`;
 
         let el = `
-            <section id="step${i}" class="step">
+            <section id="step${i}" class="step" style="background-image: url('./images/svg/${steps[i].afbeelding}.svg');">
                 <a href="#${prev}" class="material-icons step-btn-back">expand_less</a>
-                <div class="step-content" style="background-image: url('./images/svg/${steps[i].afbeelding}.svg');">
+                <div class="step-content">
                     <h2>STAP ${i+1}</h2>
                     <p>${steps[i].stap}</p>
                 </div>
@@ -230,7 +230,16 @@ function fillForm(JSONrecipe) {
 function visualiseRecipeLink(parentel, recipename, recipeId) {
         let el = `
             <li>
-                <a href="?select=${recipeId}#overzicht">${recipename}</a>
+                <a href="index.html?select=${recipeId}#overzicht">${recipename}</a>
+            </li>
+        `;
+        parentel.innerHTML += el;
+}
+
+function visualiseAdminRecipeLink(parentel, recipename, recipeId) {
+        let el = `
+            <li>
+                <a href="admin.html?select=${recipeId}#overzicht">${recipename}</a>
             </li>
         `;
         parentel.innerHTML += el;

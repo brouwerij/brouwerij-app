@@ -1,8 +1,4 @@
-.menu-item-right {
+nav#mainNav .menu-item[data-menupos='right'] {
     position: absolute;
     right: 0;
-}
-
-.menu-item-icon {
-    width: auto;
 }

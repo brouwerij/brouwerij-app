@@ -1,83 +1,37 @@
-main>section{
-    position: relative;
-    background-color: #e6d6a9;
-    scroll-snap-align: start end;
-}
-
-main>section.overzicht>a.step-btn-back {
-    visibility: hidden;
-} 
-
-#recipeName {
-    font-size: 48px;
-    overflow-wrap: anywhere;
-}
-
-main>section.step {
-    z-index: 3;
-} 
-
-main>section:nth-child(even) {
-    background-color: #c6d9d0;
-}
-
-main>section.step .step-content p {
-    background-color: rgba(230,214,169, .5);
-}
-
-main>section.step:nth-child(even) .step-content p {
-    background-color: rgba(198,217,208, 0.5);
-}
-
-main>section>a {
-    text-align: center;
-    background-color: #40444d;
-    color: white;
-}
-
-/*main>section.step:first-child>a.step-btn-back,*/
-main>section.step:last-child>a.step-btn-next {
-    display: none;
-}
-
-main>section.step>.step-content {
-    background-image: url('../images/svg/gistvat.svg');
-    background-size: auto 33%;
-    background-repeat: no-repeat;
-    background-position: 50% 100%;
-}
-
-footer {
-    background-color: #40444d;
-}
-
-header {
-    background-image: url('../images/svg/brouwproces-2.svg');
+body {
+    background-image: url(../images/svg/brouwproces-2.svg);
     background-size: auto 33%;
     background-repeat: repeat-x;
     background-position: 50% 100%;
     background-color: #c6d9d0;
-    
-    text-align: center;
+    background-attachment: fixed;
 }
 
-.view header {
-    scroll-snap-align: start end;
-}
-
-header>nav {
-    background-color: #40444d;
-    color: #f9b509;
-
-    z-index: 2;
-}
-
-header>nav {
+#start-brewing-btn img {
     box-shadow: 0px 0px 8px black;
+    border-radius: 9999px;
+    background-color: #f9b509;
 }
 
-header>nav .menu-item:hover {
-    background-color: #814715;
+.step {
+    background-size: auto 33%;
+    background-repeat: no-repeat;
+    background-position: 50% calc(100% - 150px);
+    background-color: var(--light);
+}
+
+.step:nth-child(odd),
+#overzicht {
+    background-color: var(--light-alt);
+}
+
+.step:nth-child(even) .step-content p,
+.blogpost {
+    background-color: rgba(198,217,208, 0.8);
+}
+
+.step .step-content p {
+    background-color: rgba(230,214,169, .5);
 }
 
 main .step-content>h2 {
@@ -87,29 +41,46 @@ main .step-content>h2 {
     border-radius: 20px;
 }
 
-main .step-content>p {
-    font-size: 24px;
-}
-
-header>nav .menu-dropdown-btn+.menu-dropdown {
-    background-color: #40444d;
-    list-style-type: none;
-}
-
-header>nav .menu-dropdown-btn+.menu-dropdown>li>a:hover {
-    background-color: #814715;    
+#overzicht .step-btn-next,
+.step .step-btn-next,
+.step .step-btn-back {
+    background-color: var(--dark);
+    color: var(--light); 
 }
 
 
-header>a>img {
-    box-shadow: 0px 0px 8px black;
-    border-radius: 9999px;
-    background-color: #f9b509;
+header,
+#overzicht {
+    border-top: 40px solid var(--dark);
 }
 
-header>a>img:hover {
-    box-shadow: 0px 0px 16px black;
+/** MENU */
+
+nav#mainNav {
+    background-color: var(--dark);
+    color: var(--primary);
+    box-shadow: 0px 0px 8px black; 
 }
+
+.menu-item:hover {
+    background-color: var(--secondary);
+}
+
+.menu-dropdown-btn+.menu-dropdown {
+    background-color: var(--dark);
+}
+
+.menu-dropdown-btn+.menu-dropdown li>a:hover {
+    background-color: var(--secondary);
+}
+
+nav#mainNav a.menu-btn {
+    text-decoration: none;
+    background-color: transparent;
+}
+
+
+/** ADMIN FORM */
 
 form#editRecipe {
     border: 8px solid #40444d;

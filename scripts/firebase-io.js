@@ -14,6 +14,18 @@ function readMenuFromFirebase() {
     });
 }
 
+function readAdminMenuFromFirebase() {
+    return firebase.database().ref('recipes').once('value').then(function(snapshot) {
+        recipes = snapshot;
+
+        snapshot.forEach(function(childSnapshot) {
+            recipe = childSnapshot.val();
+            visualiseAdminRecipeLink(document.querySelector("#recipes"), recipe.naam, recipe.id);
+        });
+        
+    });
+}
+
 function readRecipeFromFirebase() {
     return firebase.database().ref('recipes').once('value').then(function(snapshot) {
         recipes = snapshot;
@@ -27,7 +39,7 @@ function readRecipeFromFirebase() {
                 document.querySelector("#recipeName").innerHTML = childSnapshot.val().naam;
                 visualiseIngredients(document.querySelector("#ingredients"), childSnapshot.val());
                 visualiseProcess(document.querySelector("#brewingProcess"), childSnapshot.val());
-                visualiseSteps(document.querySelector("#steps"), createBrewingStepsJSON(childSnapshot.val()));
+                visualiseSteps(document.querySelector("main"), createBrewingStepsJSON(childSnapshot.val()));
                 return true;
             }
         });

@@ -43,27 +43,26 @@
         <script src="scripts/firebase-conf.js"></script>
         <script src="scripts/firebase-io.js"></script>
         <script src="scripts/firebase-auth-ui.js"></script>
+        
     </head>
-    <body onload="readMenuFromFirebase();  readRecipeToFormFromFirebase();" class="admin">
+    <body onload="readAdminMenuFromFirebase();  readRecipeToFormFromFirebase();" class="view">
+        <nav id="mainNav">
+            <ul>
+                <li class="menu-item">
+                    <span class="menu-btn menu-dropdown-btn">Brouwen</span>
+                    <ul id="recipes" class="menu-dropdown"></ul>
+                </li>
+                <li class="menu-item">
+                    <a href="blog.html" class="menu-btn">Blog</a>
+                </li>
+                <li class="menu-item menu-item-small" data-menupos="right">
+                    <a href="index.html" class="menu-btn material-icons">
+                    home
+                    </a>
+                </li>
+            </ul>
+        </nav>
         <header>
-            <nav>
-                <ul>
-                    <li class="menu-item">
-                        <span class="menu-btn menu-dropdown-btn">Wijzig Recept</span>
-                        <ul id="recipes" class="menu-dropdown">
-                            <li>
-                                <a href="admin.html">nieuw</a>
-                                <hr>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="menu-item menu-item-right menu-item-icon">
-                        <a href="index.html" class="menu-btn material-icons">
-                            home
-                        </a>
-                    </li>
-                </ul>
-            </nav>
             <h1>De Nonkels</h1>
             <h2>Brouwerij</h2>
             <div id="firebaseui-auth-container"></div>
@@ -72,7 +71,8 @@
             </form>
         </header>
 
-        <script type="text/javascript">
-          </script>
+        <footer>
+            
+        </footer>
     </body>
 </html>

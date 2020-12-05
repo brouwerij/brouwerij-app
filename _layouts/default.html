@@ -9,11 +9,11 @@
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Capriola&family=Jua&family=Kodchasan:wght@400;700&family=Kosugi+Maru&display=swap" rel="stylesheet">
 
-        <link rel="stylesheet" href="styles/definitions.css">
-        <link rel="stylesheet" href="styles/composition.css">
-        <link rel="stylesheet" href="styles/utilities.css">
-        <link rel="stylesheet" href="styles/blocks.css">
-        <link rel="stylesheet" href="styles/exceptions.css">
+        <link rel="stylesheet" href="{{site.baseurl}}/styles/definitions.css">
+        <link rel="stylesheet" href="{{site.baseurl}}/styles/composition.css">
+        <link rel="stylesheet" href="{{site.baseurl}}/styles/utilities.css">
+        <link rel="stylesheet" href="{{site.baseurl}}/styles/blocks.css">
+        <link rel="stylesheet" href="{{site.baseurl}}/styles/exceptions.css">
 
 
         <!-- The core Firebase JS SDK is always required and must be listed first -->
@@ -28,13 +28,13 @@
         <script src="https://www.gstatic.com/firebasejs/ui/4.7.1/firebase-ui-auth.js"></script>
         <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.6.1/firebase-ui-auth.css" />
         
-        <script src="scripts/brouwen.js"></script>
+        <script src="{{site.baseurl}}/scripts/brouwen.js"></script>
 
-        <script src="scripts/firebase-conf.js"></script>
-        <script src="scripts/firebase-io.js"></script>
+        <script src="{{site.baseurl}}/scripts/firebase-conf.js"></script>
+        <script src="{{site.baseurl}}/scripts/firebase-io.js"></script>
         
     </head>
-    <body onload="readMenuFromFirebase(); readRecipeFromFirebase();" class="view">
+    <body onload="readMenuFromFirebase(); " class="view">
         <nav id="mainNav">
             <ul>
                 <li class="menu-item">
@@ -42,34 +42,18 @@
                     <ul id="recipes" class="menu-dropdown"></ul>
                 </li>
                 <li class="menu-item">
-                    <a href="blog.html" class="menu-btn">Blog</a>
+                    <a href="{{site.baseurl}}/blog.html" class="menu-btn">Blog</a>
                 </li>
                 <li class="menu-item menu-item-small" data-menupos="right">
-                    <a href="admin.html" class="menu-btn material-icons">
+                    <a href="{{site.baseurl}}/admin.html" class="menu-btn material-icons">
                     admin_panel_settings
                     </a>
                 </li>
             </ul>
         </nav>
         <header>
-            <h1>De Nonkels</h1>
-            <h2>Brouwerij</h2>
-            <a id="start-brewing-btn" href="#overzicht"><img src="images/svg/startknop.svg"></a>
+            {{content}}
         </header>
-        <main>
-            <section id="overzicht" class="overzicht">
-                <div class="overzicht-content">
-                    <h1 id="recipeName">Bier</h1>
-                    <div id="ingredients">
-                        <h2>Ingredienten</h2>
-                    </div>
-                    <div id="brewingProcess">
-                        <h2>Proces</h2>
-                    </div>
-                </div>
-                <a href="#step0" class="step-btn-next">Start Brouwen</a>
-            </section>
-        </main>
 
         <footer>
             
