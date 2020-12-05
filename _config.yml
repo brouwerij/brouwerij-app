@@ -1,0 +1,12 @@
+baseurl: "/brouwerij-app" 
+
+repo: "https://github.com/brouwerij/brouwerij-app" 
+github_user: "T-INFORMATICA"
+github_repo: "brouwerij-app"
+
+
+defaults:
+  - scope:
+      path: "_posts"
+    values:
+      excerpt_separator: <!--more-->
