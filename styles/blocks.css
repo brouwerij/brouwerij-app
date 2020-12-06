@@ -46,6 +46,8 @@ main .step-content>h2 {
 .step .step-btn-back {
     background-color: var(--dark);
     color: var(--light); 
+    text-decoration: none;
+    background-color: transparent;
 }
 
 
