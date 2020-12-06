@@ -1,0 +1,21 @@
+---
+layout: default
+---
+
+
+<header>
+    <h1>De Nonkels</h1>
+    <h2>Brouwerij</h2>
+    <div id="firebaseui-auth-container"></div>
+    <div id="loader">Loading...</div>
+    <form id="editRecipe" style="display: none; ">
+    </form>
+</header>
+
+<script src="scripts/firebase-auth-ui.js"></script>
+<script>
+    readAdminMenuFromFirebase();  
+    readRecipeToFormFromFirebase();
+
+    document.getElementById("recipes").previousSibling.innerHTML = "Wijzig...";
+</script>
