@@ -18,9 +18,6 @@ function readAdminMenuFromFirebase() {
     return firebase.database().ref('recipes').once('value').then(function(snapshot) {
         recipes = snapshot;
 
-        
-        visualiseAdminRecipeLink(document.querySelector("#recipes"), "Nieuw Recept", "");
-
         snapshot.forEach(function(childSnapshot) {
             recipe = childSnapshot.val();
             visualiseAdminRecipeLink(document.querySelector("#recipes"), recipe.naam, recipe.id);
