@@ -24,6 +24,7 @@ font-family: 'Kosugi Maru', sans-serif;
     font-size: inherit;
     line-height: 1.5;
     font-family: 'Kodchasan', sans-serif;
+    word-break: break-word;
 }
 
 .material-icons {
