@@ -30,6 +30,12 @@ body {
     background-color: rgba(198,217,208, 0.8);
 }
 
+.blogpost a {
+    text-decoration: underline;
+    color: var(--primary);
+    background-color: var(--dark);
+}
+
 .step .step-content p {
     background-color: rgba(230,214,169, .5);
 }
