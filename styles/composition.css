@@ -110,6 +110,7 @@ nav#mainNav>ul {
 .menu-item {
     position: relative;
     width: 200px;
+    max-width: 40%;
     text-align: center;
 }
 
@@ -180,7 +181,6 @@ form#editRecipe label {
 form#editRecipe input {
     width: calc(100% - 140px);
     width: 200px;
-    max-width: 40%;
     padding: 4px 8px;
     margin-left: 4px;
 }
