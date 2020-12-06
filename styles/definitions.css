@@ -60,7 +60,7 @@ p {
     margin-top: 8px;
 }
 
-a {
+.blogpost a {
     text-decoration: underline;
     color: var(--primary);
     background-color: var(--dark);
