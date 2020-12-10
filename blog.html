@@ -6,7 +6,7 @@ layout: visitor-layout
     {% for post in site.posts %}
         <article class="blogpost">
             <h1>{{ post.title }}</h1>
-            <p>{{ post.date | date_to_string }}</p>
+            <time datetime="{{ post.date }}">{{ post.date | date_to_string }}</time>
             {{ post.excerpt }}
             <!--<a href="{{site.baseurl}}/{{ post.url }}">more...</a>-->
         </article>
