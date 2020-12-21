@@ -11,7 +11,7 @@ Links op de foto kan je een deel zien van de roerstok die we willen ombouwen om 
 
 ![brouwerij]({{site.baseurl}}/images/blog/2020-12-21-eerste-brouwdag-1.jpg)
 
-## Ready, Set... Brew! (maar nu echt)
+## Ready, Set. . . Brew! (maar nu echt)
 
 We gaan vandaag voor het eerst onze brouwerij in gebruik nemen! Nadat we enkele weken geleden bij brouwland alles besteld hebben, kunnen we aan de slag gaan met [dit recept](https://brouwerij.github.io/brouwerij-app/index.html?select=1605992678788#overzicht). 
 
