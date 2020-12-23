@@ -7,7 +7,7 @@ title:  "Eerste Brouwdag (review)!"
 
 De brouwerij werkt! De ketels loopten netjes leeg, de gasbranders werkten netjes, de thermometers van Ikea overstegen de verwachtingen en - het belangrijkste van allemaal - we hebben een 10-tal liter bier gebrouwen!
 
-Wacht\... 10 liter? Is dat niet wat weinig? Moest dat niet 20 zijn?
+Wacht\... 10 liter? Is dat niet wat weinig? Moest dat niet 20 (of zelfs 25) zijn?
 
 ## Wat Er Minder Goed Ging
 
