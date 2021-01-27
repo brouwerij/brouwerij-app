@@ -330,7 +330,7 @@ function createBrewingStepsJSON(recipe) {
     for (let i = 0; i < recipe.kookschema.length; ++i) {
         let ingredienten = [];
         for (let j = 0; j < recipe.kookschema[i].toevoegen.length; ++j) {
-            ingredienten.push(`${recipe.kookschema[i].toevoegen[0].hoeveelheid} ${recipe.kookschema[i].toevoegen[0].eenheid} ${recipe.kookschema[i].toevoegen[0].naam}`);
+            ingredienten.push(`${recipe.kookschema[i].toevoegen[j].hoeveelheid} ${recipe.kookschema[i].toevoegen[j].eenheid} ${recipe.kookschema[i].toevoegen[j].naam}`);
         }
         
         koken.push(
